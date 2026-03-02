@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CitrusBurn™ - CitrusBurn™</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #0b1220;
+      overflow: hidden;
+    }
+
+    .preview-topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      z-index: 9999;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    #bgFallback {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: block;
+      background-image: url('https://7pok9lg5ngiazvxz.public.blob.vercel-storage.com/campaigns/cmlnu6lsv000004ib6rebzqhx/background-1771165469224.jpg');
+      z-index: 1;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+    .popup-card {
+      background: #ffffff;
+      border-radius: 24px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: popupAppear 0.4s ease-out;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    @keyframes popupAppear {
+      from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 10;
+    }
+
+    .close-btn:hover {
+      background: #e2e8f0;
+      transform: scale(1.1);
+    }
+
+    .close-btn::before,
+    .close-btn::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      background: #64748b;
+    }
+
+    .close-btn::before {
+      transform: rotate(45deg);
+    }
+
+    .close-btn::after {
+      transform: rotate(-45deg);
+    }
+
+    .product-image-wrapper {
+      width: 100%;
+      padding: 40px 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+
+    .product-image {
+      max-width: 100%;
+      max-height: 280px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15));
+      animation: productAppear 0.6s ease-out 0.2s both;
+    }
+
+    .product-icon {
+      font-size: 120px;
+      animation: productAppear 0.6s ease-out 0.2s both;
+    }
+
+    @keyframes productAppear {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .popup-content {
+      padding: 30px 40px 40px;
+    }
+
+    .popup-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .popup-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #475569;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .popup-buttons {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-accept {
+      background: #2563eb;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-accept:hover {
+      background: #1d4ed8;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 640px) {
+      .popup-card {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 20px;
+      }
+
+      .product-image-wrapper {
+        padding: 30px 20px 15px;
+      }
+
+      .product-image {
+        max-height: 200px;
+      }
+
+      .product-icon {
+        font-size: 80px;
+      }
+
+      .popup-content {
+        padding: 20px 24px 30px;
+      }
+
+      .popup-title {
+        font-size: 24px;
+      }
+
+      .popup-text {
+        font-size: 15px;
+      }
+
+      .popup-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+
+  <!-- Background Fallback Image -->
+  <div id="bgFallback"></div>
+
+  <!-- Overlay with Popup -->
+  <div id="overlay">
+    <div class="popup-card">
+      <button class="close-btn" id="btnClose" aria-label="Close" data-href="https://acc0a4-txdpapgubqi2p-23d0e.hop.clickbank.net/?&traffic_source=google&ad=rp"></button>
+
+      <div class="product-image-wrapper" id="imageWrapper">
+        <img class="product-image" id="productImage" src="https://7pok9lg5ngiazvxz.public.blob.vercel-storage.com/campaigns/cmlnu6lsv000004ib6rebzqhx/product-1771165469224.png" alt="Product" />
+      </div>
+
+      <div class="popup-content">
+        <h2 class="popup-title" id="popupTitle">CitrusBurn™</h2>
+
+        <p class="popup-text" id="popupText">
+          Claim Your Discounted CitrusBurn™ Below While Stock Lasts: 
+        </p>
+
+        <div class="popup-buttons">
+          <a href="https://acc0a4-txdpapgubqi2p-23d0e.hop.clickbank.net/?&traffic_source=google&ad=rp" class="btn btn-accept" id="btnAccept" style="max-width: 100%;">Claim Your Discount</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ClickDefender Tracking Script (Auto-tracks all links and handles redirects!) -->
+  <script src="https://api.clickdefender.com.br/api/presell/cmlnu6lsv000004ib6rebzqhx/script"></script>
+
+  <!-- Global Click Redirect Script -->
+  <script>
+    (function() {
+      // Wait for ClickDefender to be ready
+      function setupGlobalClickRedirect() {
+        var affiliateLink = 'https://acc0a4-txdpapgubqi2p-23d0e.hop.clickbank.net/?&traffic_source=google&ad=rp';
+        var processed = false;
+
+        // Track click and redirect
+        function handleGlobalClick(event) {
+          // Prevent multiple redirects
+          if (processed) return;
+
+          // Check if click is on close button, decline button, or any valid clickable element
+          var target = event.target;
+          var isButton = target.tagName === 'BUTTON' || target.tagName === 'A';
+          var isInsideCard = target.closest('.popup-card');
+          
+          // Only process once
+          processed = true;
+
+          // Use ClickDefender to track and redirect
+          if (window.ClickDefender && typeof window.ClickDefender.trackClick === 'function') {
+            window.ClickDefender.trackClick(function() {
+              var finalUrl = window.ClickDefender.buildAffiliateUrl(affiliateLink);
+              window.location.href = finalUrl;
+            });
+          } else {
+            // Fallback if ClickDefender not loaded
+            window.location.href = affiliateLink;
+          }
+        }
+
+        // Attach click listener to overlay (clicks outside modal)
+        var overlay = document.getElementById('overlay');
+        if (overlay) {
+          overlay.addEventListener('click', function(e) {
+            // Only trigger if clicking directly on overlay (not on popup card)
+            if (e.target === overlay) {
+              handleGlobalClick(e);
+            }
+          });
+        }
+
+        // Attach click listener to popup card itself
+        var popupCard = document.querySelector('.popup-card');
+        if (popupCard) {
+          popupCard.addEventListener('click', function(e) {
+            // Check if clicking on non-interactive elements
+            var target = e.target;
+            var isButton = target.tagName === 'BUTTON' || target.tagName === 'A';
+            
+            // If clicking on background areas of the card (not buttons)
+            if (!isButton && (target === popupCard || target.closest('.popup-content') || target.closest('.product-image-wrapper'))) {
+              handleGlobalClick(e);
+            }
+          });
+        }
+
+        // Ensure all buttons still work properly with tracking
+        var allButtons = document.querySelectorAll('.btn, .close-btn');
+        allButtons.forEach(function(btn) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            handleGlobalClick(e);
+          });
+        });
+      }
+
+      // Initialize after DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupGlobalClickRedirect);
+      } else {
+        setupGlobalClickRedirect();
+      }
+    })();
+  </script>
+
+  
+</body>
+</html>
