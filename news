@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>PHD Health – Lung</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            background-color: #fff;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo { display: flex; align-items: center; gap: 3px; }
+        .menu-icon { display: flex; flex-direction: column; gap: 4px; cursor: pointer; padding: 5px; }
+        .menu-icon span { width: 22px; height: 2px; background-color: #333; display: block; }
+        .logo-main { font-size: 32px; font-weight: 700; color: #c8102e; letter-spacing: -0.5px; line-height: 1; }
+        .logo-subtitle { font-size: 14px; font-weight: 500; color: #1a1a1a; letter-spacing: 0.3px; align-self: flex-end; padding-bottom: 3px; }
+        .separator-line { width: 100%; height: 2px; background-color: #e5e5e5; margin-top: 7px; }
+
+        /* ── MAIN CONTENT ── */
+        .content-wrap {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px 20px 40px;
+        }
+
+        .headline {
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #111;
+            margin-bottom: 14px;
+        }
+        .headline a { color: inherit; text-decoration: none; }
+        .headline span { color: #cc0000; }
+
+        .byline {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #6e6e6e;
+            margin-bottom: 20px;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .btn-watch {
+            display: block;
+            width: 100%;
+            background-color: #cc0000;
+            color: #fff;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 20px 0;
+            transition: background 0.2s;
+        }
+        .btn-watch:hover { background-color: #aa0000; }
+
+        .body-text {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #333;
+            margin-bottom: 18px;
+        }
+        .body-text a { color: inherit; text-decoration: none; }
+        .body-text strong { font-weight: 700; }
+
+        .pullquote {
+            background-color: #f9f9f9;
+            border-left: 4px solid #cc0000;
+            padding: 20px;
+            margin: 25px 0;
+            font-style: italic;
+        }
+        .pullquote p { font-size: 17px; line-height: 1.6; color: #333; }
+        .pullquote .attribution { font-size: 14px; color: #666; margin-top: 10px; text-align: right; font-style: normal; }
+        .pullquote a { color: inherit; text-decoration: none; }
+
+        .warning-box {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cc0000;
+            font-weight: 700;
+            text-align: center;
+            padding: 15px;
+            background-color: #fff3cd;
+            border-left: 4px solid #cc0000;
+            margin: 20px 0;
+        }
+        .warning-box a { color: #cc0000; text-decoration: none; }
+
+        .cta-link { color: #1877f2; font-weight: 700; text-decoration: underline; }
+
+        /* ── FOOTER ── */
+        .footer {
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+            padding: 40px 20px;
+        }
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+        .footer-legal {
+            flex: 1 1 340px;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #555;
+        }
+        .footer-legal strong { color: #222; }
+        .footer-links {
+            flex: 0 1 200px;
+        }
+        .footer-links a {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #222;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+        .footer-links a:hover { text-decoration: underline; }
+        .footer-copy {
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        @media (max-width: 600px) {
+            .headline { font-size: 20px; }
+            .logo-main { font-size: 28px; }
+            .footer-inner { flex-direction: column; gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-content">
+        <div class="logo">
+            <div class="menu-icon">
+                <span></span><span></span><span></span>
+            </div>
+            <span class="logo-main">PHD</span>
+            <span class="logo-subtitle">Health</span>
+        </div>
+    </div>
+    <div class="separator-line"></div>
+</header>
+
+<!-- MAIN -->
+<div class="content-wrap">
+
+    <h1 class="headline">
+        <a href="https://prohealthdays.online/lung-v/">
+            Iconic Artist Reveals: "Decades of Smoking Left Me Gasping for Air… Then This
+            <span>30-Second Valve Fix</span> Saved My Life When Doctors Had Given Up"
+        </a>
+    </h1>
+
+    <p class="byline">
+        By Respiratory Health Investigation Team<br>
+        Featuring Dr. Barbara O'Neill, Former Harvard Medical School Lung Specialist<br>
+        6 minute read<br>
+        Published 5 hours ago – Updated recently
+    </p>
+
+    <a href="https://prohealthdays.online/lung-v/">
+        <img class="hero-img"
+             src="https://prohealthdays.online/wp-content/uploads/2026/01/Copia-de-teste-6-768x432.webp"
+             alt="Lung health – PHD Health"
+             width="768" height="432">
+    </a>
+
+    <a class="btn-watch" href="https://prohealthdays.online/lung-v/">CLICK HERE TO WATCH THE VIDEO</a>
+
+    <p class="body-text">
+        <a href="https://prohealthdays.online/lung-v/">
+            <strong>An iconic entertainer who smoked 50+ years and a 73-year-old Hollywood stuntman were both told their COPD was "irreversible"</strong>
+        </a>—then exposed something shocking:
+        <a href="https://prohealthdays.online/lung-v/">
+            <strong>Your lungs aren't broken—they're being choked by microscopic valves jammed with toxins.</strong>
+        </a>
+    </p>
+
+    <p class="body-text">
+        The stuntman couldn't walk to his mailbox without stopping three times. The rapper couldn't finish a verse without gasping. Both were told to prepare for oxygen tanks.
+    </p>
+
+    <div class="pullquote">
+        <p><a href="https://prohealthdays.online/lung-v/">"Man, I was done. Couldn't breathe to finish one bar. Felt like suffocating standing up. This valve method brought me back. Now I record for hours. No cap."</a></p>
+        <p class="attribution"><a href="https://prohealthdays.online/lung-v/">— <strong>Iconic Artist</strong></a></p>
+    </div>
+
+    <p class="body-text">
+        A Harvard lung researcher revealed what Big Pharma conceals:
+        <a href="https://prohealthdays.online/lung-v/"><strong>a simple "valve unlock protocol"</strong></a>
+        that opens microscopic passages your $300/month inhalers can't touch—the real reason you're suffocating despite "open" airways.
+    </p>
+
+    <p class="body-text">
+        Within 17 days, the stuntman went from planning his funeral to riding 12 miles on horseback. His FEV1 jumped 31%. The rapper went from cutting sessions short to recording for hours—no inhaler needed.
+    </p>
+
+    <p class="body-text">
+        This video reveals the
+        <a href="https://prohealthdays.online/lung-v/"><strong>"30-second valve restoration routine"</strong></a>
+        reversing "permanent" COPD—proving your symptoms aren't irreversible damage, but jammed valves doctors never addressed.
+    </p>
+
+    <p class="body-text">
+        If you're hitting your inhaler 6–8 times daily with no relief, or terrified of oxygen tanks —
+        <a class="cta-link" href="https://prohealthdays.online/lung-v/" target="_blank" rel="noopener">watch now</a>
+        before this is taken down.
+    </p>
+
+    <div class="warning-box">
+        <a href="https://prohealthdays.online/lung-v/">⚠️ WARNING: Big Pharma is working to remove this video. Watch immediately before it disappears.</a>
+    </div>
+
+    <a href="https://prohealthdays.online/lung-v/">
+        <img class="hero-img"
+             src="https://prohealthdays.online/wp-content/uploads/2026/01/30-sec-768x432.webp"
+             alt="30-Second Valve Fix"
+             width="768" height="432">
+    </a>
+
+    <a class="btn-watch" href="https://prohealthdays.online/lung-v/">CLICK HERE TO WATCH THE VIDEO</a>
+
+    <a href="https://prohealthdays.online/lung-v/">
+        <img class="hero-img"
+             src="https://prohealthdays.online/wp-content/uploads/2026/01/imagem_2024-10-17_122200231-2-1-768x138.webp"
+             alt=""
+             width="768" height="138">
+    </a>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-legal">
+            <p><strong>Copyright 2025 – All rights reserved.</strong></p><br>
+            <p>The information presented on this website is intended for educational purposes only and does not constitute medical advice. We strongly encourage you to consult with a licensed healthcare provider before implementing any health-related changes. If you are currently under medical care or have pre-existing conditions, please discuss any new health approaches with your doctor first.</p><br>
+            <p>We recommend performing your own research and consulting multiple reputable sources before making any health decisions. Always speak with your physician before acting on any recommendations found on this site or associated with any products mentioned.</p><br>
+            <p>Results vary from person to person. The testimonials provided on this platform reflect individual experiences and should not be interpreted as a guarantee of similar outcomes.</p><br>
+            <p>This site is not a substitute for professional medical diagnosis, treatment, or care. For any medical questions or concerns, please consult a qualified healthcare practitioner.</p>
+        </div>
+        <div class="footer-links">
+            <a href="https://prohealthdays.online/privacy-policy-2/">Privacy Policy</a>
+            <a href="https://prohealthdays.online/terms-of-service/">Terms of Service</a>
+            <a href="https://prohealthdays.online/disclosure-agreement/">Disclosure Agreement</a>
+            <a href="https://prohealthdays.online/disclaimer/">Disclaimer</a>
+            <a href="https://prohealthdays.online/about-us/">About Us</a>
+            <a href="https://prohealthdays.online/contact/">Contact</a>
+        </div>
+    </div>
+    <div class="footer-copy">
+        <strong>Copyright 2025 – All rights reserved.</strong>
+    </div>
+</footer>
+
+</body>
+</html>
