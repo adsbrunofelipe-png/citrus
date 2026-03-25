@@ -14,12 +14,20 @@
   gtag('config', 'AW-17059519097');
 </script>
 
+<!-- Performance: preconnect critical origins -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://scripts.converteai.net">
+<link rel="preconnect" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://prohealthdays.online">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://cod.codevisita.com.br">
+<!-- Fonts: subset enxuto + swap para evitar FOIT -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;900&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+<!-- Preload imagem crítica acima da dobra -->
+<link rel="preload" as="image" href="https://prohealthdays.online/wp-content/uploads/2026/02/imagem_2024-10-17_122200231-2-1-1-768x138.webp">
 <style>
-/* ═══════════════════════════════════════════
-   RESET & BASE
-═══════════════════════════════════════════ */
+
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
@@ -34,9 +42,6 @@ body{
 img{max-width:100%;height:auto;display:block;}
 a{text-decoration:none;color:inherit;}
 
-/* ═══════════════════════════════════════════
-   HEADER
-═══════════════════════════════════════════ */
 .site-header{
   background:#fff;
   position:sticky;
@@ -64,9 +69,6 @@ a{text-decoration:none;color:inherit;}
 .logo-health{font-size:14px;font-weight:500;color:#1a1a1a;padding-bottom:4px;letter-spacing:.3px;}
 .header-sep{height:2px;background:#e5e5e5;}
 
-/* ═══════════════════════════════════════════
-   HEADLINE SECTION
-═══════════════════════════════════════════ */
 .headline-section{padding:28px clamp(16px,5vw,50px) 0;}
 .headline-inner{max-width:660px;margin:0 auto;}
 
@@ -87,17 +89,11 @@ a{text-decoration:none;color:inherit;}
   margin-bottom:20px;
 }
 
-/* ═══════════════════════════════════════════
-   VIDEO SECTION
-═══════════════════════════════════════════ */
 .video-section{padding:0 clamp(16px,5vw,50px);}
 .video-inner{max-width:660px;margin:0 auto;}
 .video-wrap{max-width:420px;margin:0 auto 18px;width:100%;}
 vturb-smartplayer{display:block;width:100%;}
 
-/* ═══════════════════════════════════════════
-   WATCHING + TRUST
-═══════════════════════════════════════════ */
 .watching-row{
   font-size:1.1rem;
   font-weight:700;
@@ -108,14 +104,8 @@ vturb-smartplayer{display:block;width:100%;}
 .watching-row span{color:#cc0000;}
 .trust-badge{display:block;max-width:100%;margin:0 auto 0;}
 
-/* ═══════════════════════════════════════════
-   HIDDEN UNTIL VIDEO TIMER
-═══════════════════════════════════════════ */
 .esconder{display:none!important;}
 
-/* ═══════════════════════════════════════════
-   CTA BANNER
-═══════════════════════════════════════════ */
 .cta-banner{
   background:linear-gradient(135deg,#1a0533 0%,#2d0a5a 50%,#1a0533 100%);
   padding:22px clamp(16px,5vw,50px) 16px;
@@ -130,7 +120,6 @@ vturb-smartplayer{display:block;width:100%;}
 }
 .cta-headline .yellow{color:#ffe600;}
 
-/* countdown */
 .countdown{
   display:inline-flex;
   align-items:center;
@@ -155,12 +144,8 @@ vturb-smartplayer{display:block;width:100%;}
 .cd-label{font-size:.65rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.05em;}
 .cd-sep{font-size:2rem;font-weight:900;color:#ffe600;line-height:1;}
 
-/* ═══════════════════════════════════════════
-   CARDS AREA
-═══════════════════════════════════════════ */
 .cards-area{background:#edf1fb;padding:36px clamp(12px,4vw,32px) 52px;}
 
-/* ── DESKTOP 3-col grid ── */
 .cards-desktop{
   display:grid;
   grid-template-columns:1fr 1.15fr 1fr;
@@ -171,11 +156,9 @@ vturb-smartplayer{display:block;width:100%;}
 }
 @media(max-width:767px){.cards-desktop{display:none;}}
 
-/* ── MOBILE single-col ── */
 .cards-mobile{display:none;}
 @media(max-width:767px){.cards-mobile{display:block;max-width:500px;margin:0 auto;}}
 
-/* ── CARD BASE ── */
 .card{
   background:#fff;
   border-radius:20px;
@@ -196,7 +179,6 @@ vturb-smartplayer{display:block;width:100%;}
 }
 .card.featured:hover{transform:scale(1.12) translateY(-4px);}
 
-/* card header */
 .card-head{
   padding:18px 14px 14px;
   text-align:center;
@@ -220,7 +202,6 @@ vturb-smartplayer{display:block;width:100%;}
 .card-head.grad-gold .supply,
 .card-head.grad-green .supply{color:rgba(255,255,255,.65);}
 
-/* card image — bigger, prominent */
 .card-img-wrap{
   padding:24px 28px 6px;
   text-align:center;
@@ -235,7 +216,6 @@ vturb-smartplayer{display:block;width:100%;}
 }
 .card-img-wrap a:hover img{transform:scale(1.04);}
 
-/* card body */
 .card-body{
   padding:18px 22px 22px;
   flex:1;
@@ -266,7 +246,6 @@ vturb-smartplayer{display:block;width:100%;}
 }
 .check-row svg{width:20px;height:20px;fill:#0968f6;flex-shrink:0;}
 
-/* buy button — blue gradient */
 .btn-buy{
   display:block;
   width:100%;
@@ -316,9 +295,6 @@ vturb-smartplayer{display:block;width:100%;}
   box-shadow:0 3px 10px rgba(46,125,50,.3);
 }
 
-/* ═══════════════════════════════════════════
-   MOBILE CARD STYLE — full-width stacked
-═══════════════════════════════════════════ */
 .m-card{
   background:#fff;
   border-radius:18px;
@@ -345,7 +321,6 @@ vturb-smartplayer{display:block;width:100%;}
 .m-card-badge.g-gold{background:linear-gradient(135deg,#1a2540 0%,#243060 100%);color:#fff;}
 .m-card-badge.g-green{background:linear-gradient(135deg,#0d1f3c 0%,#0968f6 100%);color:#fff;}
 
-/* image + title stacked on top */
 .m-card-top{
   display:flex;
   flex-direction:column;
@@ -356,6 +331,7 @@ vturb-smartplayer{display:block;width:100%;}
 }
 .m-card-top .bottles-num{font-size:1.15rem;font-weight:800;color:#1a2540;margin-bottom:3px;text-transform:uppercase;letter-spacing:.03em;}
 .m-card-top .supply-txt{font-size:.82rem;color:#888;margin-bottom:14px;font-weight:500;}
+.m-card-top a{display:block;width:100%;text-align:center;}
 .m-card-top img{
   width:100%;
   max-width:300px;
@@ -377,9 +353,6 @@ vturb-smartplayer{display:block;width:100%;}
 .m-total{font-size:.87rem;color:#555;text-align:center;margin-top:8px;line-height:1.6;}
 .m-total b{color:#111;font-weight:700;}
 
-/* ═══════════════════════════════════════════
-   STICKY BAR — all screens, hidden until CTA
-═══════════════════════════════════════════ */
 .sticky-bar{
   display:none;
   position:fixed;
@@ -395,7 +368,6 @@ vturb-smartplayer{display:block;width:100%;}
 }
 .sticky-bar.active{display:flex;}
 
-/* top row: label + countdown */
 .sticky-top-row{
   display:flex;
   align-items:center;
@@ -452,9 +424,6 @@ vturb-smartplayer{display:block;width:100%;}
   box-shadow:0 4px 18px rgba(0,0,0,.5);
 }
 
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
 .site-footer{background:#f0f0f0;padding:32px clamp(16px,5vw,50px) 24px;}
 .footer-inner{max-width:660px;margin:0 auto;}
 .footer-legal{font-size:.78rem;color:#666;line-height:1.75;margin-bottom:18px;}
@@ -718,7 +687,7 @@ vturb-smartplayer{display:block;width:100%;}
 
 <!-- ══════════════════════ SCRIPTS ══════════════════════ -->
 <script>
-/* Vturb Player */
+
 (function(){
   var s=document.createElement('script');
   s.src='https://scripts.converteai.net/aef86c86-2804-4c3c-a018-d1c18d0ace64/players/69c18bde596c6131b7434542/v4/player.js';
@@ -726,7 +695,6 @@ vturb-smartplayer{display:block;width:100%;}
   document.head.appendChild(s);
 })();
 
-/* Watching counter */
 var watchEl=document.getElementById('watching-now'),count=500;
 function tickW(){
   var r=Math.random(),inc=r<.70?Math.floor(Math.random()*6)+3:r<.95?Math.floor(Math.random()*11)+10:Math.floor(Math.random()*16)+25;
@@ -735,7 +703,6 @@ function tickW(){
 }
 tickW();
 
-/* Countdown 30min evergreen */
 var cdMin=document.getElementById('cd-min'),cdSec=document.getElementById('cd-sec'),sfCd=document.getElementById('sf-cd'),total=30*60;
 function tickC(){
   var m=Math.floor(total/60),s=total%60;
@@ -745,7 +712,6 @@ function tickC(){
 }
 tickC();
 
-/* Show CTA after video delay */
 var DELAY=1042;
 var ctaBlock=document.getElementById('cta-block');
 var stickyBar=document.getElementById('sticky-bar');
