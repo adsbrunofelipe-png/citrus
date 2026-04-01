@@ -14,13 +14,12 @@
   gtag('config', 'AW-17059519097');
 </script>
 
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1GNHLDFCL0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-1GNHLDFCL0');
 </script>
 
@@ -37,7 +36,6 @@
 <!-- Preload imagem crítica acima da dobra -->
 <link rel="preload" as="image" href="https://prohealthdays.online/wp-content/uploads/2026/02/imagem_2024-10-17_122200231-2-1-1-768x138.webp">
 <style>
-
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
@@ -81,7 +79,6 @@ a{text-decoration:none;color:inherit;}
 
 .headline-section{padding:28px clamp(16px,5vw,50px) 0;}
 .headline-inner{max-width:660px;margin:0 auto;}
-
 .main-headline{
   font-family:'Roboto Slab','Roboto',sans-serif;
   font-size:clamp(1.25rem,3.8vw,1.9rem);
@@ -91,7 +88,6 @@ a{text-decoration:none;color:inherit;}
   margin-bottom:14px;
 }
 .main-headline .red{color:#cc0000;}
-
 .byline{
   color:#6e6e6e;
   font-size:14px;
@@ -116,6 +112,7 @@ vturb-smartplayer{display:block;width:100%;}
 
 .esconder{display:none!important;}
 
+/* ── CTA BANNER ── */
 .cta-banner{
   background:linear-gradient(135deg,#1a0533 0%,#2d0a5a 50%,#1a0533 100%);
   padding:22px clamp(16px,5vw,50px) 16px;
@@ -154,215 +151,118 @@ vturb-smartplayer{display:block;width:100%;}
 .cd-label{font-size:.65rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.05em;}
 .cd-sep{font-size:2rem;font-weight:900;color:#ffe600;line-height:1;}
 
-.cards-area{background:#edf1fb;padding:36px clamp(12px,4vw,32px) 52px;}
-
-.cards-desktop{
-  display:grid;
-  grid-template-columns:1fr 1.15fr 1fr;
-  gap:22px;
-  max-width:1100px;
-  margin:0 auto;
-  align-items:center;
+/* ── ORDER SECTION ── */
+.order-section{
+  background:#edf1fb;
+  padding:48px clamp(16px,5vw,48px) 56px;
 }
-@media(max-width:767px){.cards-desktop{display:none;}}
-
-.cards-mobile{display:none;}
-@media(max-width:767px){.cards-mobile{display:block;max-width:500px;margin:0 auto;}}
-
-.card{
-  background:#fff;
-  border-radius:20px;
-  border:2px solid #dde3ee;
-  overflow:visible;
+.order-inner{
+  max-width:860px;
+  margin:0 auto;
   display:flex;
-  flex-direction:column;
-  transition:transform .22s ease,box-shadow .22s ease;
-  box-shadow:0 4px 18px rgba(9,104,246,.08);
+  align-items:center;
+  justify-content:center;
+  gap:48px;
 }
-.card:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 12px 36px rgba(9,104,246,.15);}
-.card.featured{
-  border:3px solid #0968f6;
-  box-shadow:0 10px 40px rgba(9,104,246,.28);
-  transform:scale(1.09);
-  z-index:2;
-  position:relative;
+@media(max-width:640px){
+  .order-inner{
+    flex-direction:column;
+    gap:28px;
+  }
 }
-.card.featured:hover{transform:scale(1.12) translateY(-4px);}
 
-.card-head{
-  padding:18px 14px 14px;
-  text-align:center;
-  background:#1a2540;
-  border-radius:18px 18px 0 0;
+/* image side */
+.order-img-wrap{
+  flex:0 0 auto;
 }
-.card-head.grad-gold{background:linear-gradient(135deg,#1a2540 0%,#243060 100%);}
-.card-head.grad-green{background:linear-gradient(135deg,#0d1f3c 0%,#0968f6 100%);}
-.card-head h3{
-  font-size:1.1rem;
-  font-weight:800;
-  color:#fff;
-  line-height:1.2;
-  margin-bottom:4px;
-  text-transform:uppercase;
-  letter-spacing:.06em;
+.order-img-wrap img{
+  width:clamp(220px,40vw,340px);
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 8px 40px rgba(9,104,246,.12);
 }
-.card-head.grad-gold h3,
-.card-head.grad-green h3{color:#fff;}
-.card-head .supply{font-size:.84rem;font-weight:500;color:rgba(255,255,255,.65);}
-.card-head.grad-gold .supply,
-.card-head.grad-green .supply{color:rgba(255,255,255,.65);}
 
-.card-img-wrap{
-  padding:24px 28px 6px;
-  text-align:center;
-  background:#f8faff;
-}
-.card-img-wrap img{
-  margin:0 auto;
-  width:100%;
-  max-height:260px;
-  object-fit:contain;
-  transition:transform .2s;
-}
-.card-img-wrap a:hover img{transform:scale(1.04);}
-
-.card-body{
-  padding:18px 22px 22px;
+/* CTA side */
+.order-cta-wrap{
   flex:1;
   display:flex;
   flex-direction:column;
-  align-items:center;
-  background:#fff;
-  border-radius:0 0 18px 18px;
+  align-items:flex-start;
+  gap:0;
+}
+@media(max-width:640px){
+  .order-cta-wrap{
+    align-items:center;
+    text-align:center;
+    width:100%;
+  }
 }
 
-.price-wrap{display:flex;align-items:baseline;gap:3px;margin-bottom:2px;}
-.price-dollar{font-size:1.6rem;font-weight:800;color:#111;line-height:1;}
-.price-num{font-size:5rem;font-weight:900;color:#111;line-height:1;letter-spacing:-.03em;}
-.price-per{font-size:.87rem;color:#888;margin-bottom:12px;text-align:center;font-weight:500;}
-
-.divider{width:100%;height:1px;background:#e8edf5;margin:10px 0;}
-
-.check-row{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  font-size:.9rem;
+.order-tagline{
+  font-size:clamp(.85rem,2vw,1rem);
   font-weight:600;
-  color:#1a2540;
-  width:100%;
-  margin:4px 0;
-  padding:2px 0;
+  color:#0968f6;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:10px;
 }
-.check-row svg{width:20px;height:20px;fill:#0968f6;flex-shrink:0;}
+.order-title{
+  font-family:'Roboto Slab','Roboto',sans-serif;
+  font-size:clamp(1.3rem,3.5vw,2rem);
+  font-weight:700;
+  color:#1a2540;
+  line-height:1.25;
+  margin-bottom:18px;
+}
+.order-title span{color:#0968f6;}
 
-.btn-buy{
-  display:block;
-  width:100%;
-  margin:16px 0 10px;
-  padding:16px 14px;
+/* pulsing ORDER NOW button */
+@keyframes btn-pulse{
+  0%  {box-shadow:0 0 0 0 rgba(9,104,246,.55),0 6px 24px rgba(9,104,246,.4);}
+  65% {box-shadow:0 0 0 14px rgba(9,104,246,0),0 6px 24px rgba(9,104,246,.4);}
+  100%{box-shadow:0 0 0 0 rgba(9,104,246,0),0 6px 24px rgba(9,104,246,.4);}
+}
+.btn-order{
+  display:inline-block;
+  padding:18px 44px;
   background:linear-gradient(180deg,#3d8eff 0%,#0968f6 45%,#0550c8 100%);
   color:#fff!important;
-  font-size:1.05rem;
-  font-weight:800;
+  font-size:1.2rem;
+  font-weight:900;
   text-align:center;
-  border-radius:12px;
-  line-height:1.3;
-  transition:transform .15s,box-shadow .15s,filter .15s;
-  cursor:pointer;
-  letter-spacing:.03em;
-  box-shadow:0 5px 20px rgba(9,104,246,.45);
-  text-transform:uppercase;
-}
-.btn-buy:hover{
-  transform:scale(1.04);
-  box-shadow:0 10px 28px rgba(9,104,246,.6);
-  filter:brightness(1.08);
-}
-.btn-buy .sub{
-  font-size:.88rem;
-  font-weight:500;
-  display:block;
-  text-transform:none;
-  opacity:.92;
-  margin-top:3px;
-}
-
-.payment-img{height:28px;margin:0 auto 10px;}
-.total-line{font-size:.87rem;color:#555;text-align:center;line-height:1.6;}
-.total-line b{color:#1a2540;font-weight:700;}
-.free-ship-badge{
-  background:#2e7d32;
-  color:#fff;
-  font-size:.78rem;
-  font-weight:700;
-  text-align:center;
-  padding:7px 18px;
-  border-radius:20px;
-  margin-top:9px;
-  letter-spacing:.05em;
-  text-transform:uppercase;
-  box-shadow:0 3px 10px rgba(46,125,50,.3);
-}
-
-.m-card{
-  background:#fff;
-  border-radius:18px;
-  border:2px solid #dde3ee;
-  overflow:hidden;
-  margin-bottom:22px;
-  box-shadow:0 4px 16px rgba(9,104,246,.08);
-}
-.m-card.featured-m{
-  border:3px solid #0968f6;
-  box-shadow:0 6px 28px rgba(9,104,246,.25);
-}
-
-.m-card-badge{
-  text-align:center;
-  font-weight:800;
-  font-size:.95rem;
-  padding:13px 14px;
-  background:#1a2540;
-  color:#fff;
+  border-radius:14px;
   letter-spacing:.06em;
   text-transform:uppercase;
+  cursor:pointer;
+  animation:btn-pulse 1.8s ease-out infinite;
+  transition:filter .15s,transform .15s;
+  line-height:1.2;
 }
-.m-card-badge.g-gold{background:linear-gradient(135deg,#1a2540 0%,#243060 100%);color:#fff;}
-.m-card-badge.g-green{background:linear-gradient(135deg,#0d1f3c 0%,#0968f6 100%);color:#fff;}
+.btn-order:hover{
+  filter:brightness(1.1);
+  transform:scale(1.04);
+}
+.btn-order .btn-sub{
+  display:block;
+  font-size:.78rem;
+  font-weight:500;
+  text-transform:none;
+  opacity:.88;
+  margin-top:4px;
+  letter-spacing:.02em;
+}
 
-.m-card-top{
+.order-guarantee{
+  margin-top:14px;
+  font-size:.8rem;
+  color:#666;
   display:flex;
-  flex-direction:column;
   align-items:center;
-  padding:20px 24px 12px;
-  background:#f8faff;
-  border-bottom:1px solid #e8edf5;
+  gap:6px;
 }
-.m-card-top .bottles-num{font-size:1.15rem;font-weight:800;color:#1a2540;margin-bottom:3px;text-transform:uppercase;letter-spacing:.03em;}
-.m-card-top .supply-txt{font-size:.82rem;color:#888;margin-bottom:14px;font-weight:500;}
-.m-card-top a{display:block;width:100%;text-align:center;}
-.m-card-top img{
-  width:100%;
-  max-width:300px;
-  max-height:210px;
-  object-fit:contain;
-  margin:0 auto;
-}
+.order-guarantee svg{width:18px;height:18px;fill:#2e7d32;flex-shrink:0;}
 
-.m-card-details{
-  padding:16px 22px 4px;
-  background:#fff;
-}
-.m-price-row{display:flex;align-items:baseline;gap:3px;justify-content:center;margin-bottom:2px;}
-.m-price-dollar{font-size:1.6rem;font-weight:800;color:#111;}
-.m-price-num{font-size:4.5rem;font-weight:900;color:#111;line-height:1;letter-spacing:-.03em;}
-.m-price-per{font-size:.84rem;color:#888;text-align:center;margin-bottom:10px;font-weight:500;}
-
-.m-btn-area{padding:4px 18px 20px;background:#fff;}
-.m-total{font-size:.87rem;color:#555;text-align:center;margin-top:8px;line-height:1.6;}
-.m-total b{color:#111;font-weight:700;}
-
+/* ── STICKY BAR ── */
 .sticky-bar{
   display:none;
   position:fixed;
@@ -370,14 +270,13 @@ vturb-smartplayer{display:block;width:100%;}
   z-index:9999;
   background:#0a0a0a;
   border-top:2px solid #c9a227;
-  box-shadow:0 -4px 24px rgba(0,0,0,.55), inset 0 1px 0 rgba(201,162,39,.25);
+  box-shadow:0 -4px 24px rgba(0,0,0,.55),inset 0 1px 0 rgba(201,162,39,.25);
   padding:10px 16px 12px;
   flex-direction:column;
   align-items:center;
   gap:8px;
 }
 .sticky-bar.active{display:flex;}
-
 .sticky-top-row{
   display:flex;
   align-items:center;
@@ -385,13 +284,7 @@ vturb-smartplayer{display:block;width:100%;}
   gap:10px;
   width:100%;
 }
-.sticky-label{
-  color:#fff;
-  font-size:1rem;
-  font-weight:700;
-  letter-spacing:.02em;
-  white-space:nowrap;
-}
+.sticky-label{color:#fff;font-size:1rem;font-weight:700;letter-spacing:.02em;white-space:nowrap;}
 .sticky-cd-wrap{
   display:flex;
   align-items:center;
@@ -409,11 +302,10 @@ vturb-smartplayer{display:block;width:100%;}
   min-width:52px;
   text-align:center;
 }
-
 @keyframes pulse-glow{
-  0%  {box-shadow:0 0 0 0 rgba(0,210,180,.55), 0 4px 18px rgba(0,0,0,.5);}
-  60% {box-shadow:0 0 0 10px rgba(0,210,180,0), 0 4px 18px rgba(0,0,0,.5);}
-  100%{box-shadow:0 0 0 0  rgba(0,210,180,0), 0 4px 18px rgba(0,0,0,.5);}
+  0%  {box-shadow:0 0 0 0 rgba(0,210,180,.55),0 4px 18px rgba(0,0,0,.5);}
+  60% {box-shadow:0 0 0 10px rgba(0,210,180,0),0 4px 18px rgba(0,0,0,.5);}
+  100%{box-shadow:0 0 0 0 rgba(0,210,180,0),0 4px 18px rgba(0,0,0,.5);}
 }
 .sticky-btn{
   display:block;
@@ -434,25 +326,19 @@ vturb-smartplayer{display:block;width:100%;}
   box-shadow:0 4px 18px rgba(0,0,0,.5);
 }
 
+/* ── FOOTER ── */
 .site-footer{background:#f0f0f0;padding:32px clamp(16px,5vw,50px) 24px;}
 .footer-inner{max-width:660px;margin:0 auto;}
 .footer-legal{font-size:.78rem;color:#666;line-height:1.75;margin-bottom:18px;}
 .footer-legal strong{color:#333;}
-.footer-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px 16px;
-  margin-bottom:14px;
-}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:14px;}
 .footer-links a{font-size:.8rem;color:#333;text-decoration:underline;}
 .footer-copy{font-size:.75rem;color:#888;}
-
-.ico-check{width:17px;height:17px;fill:#2e7d32;flex-shrink:0;}
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════ HEADER ══════════════════════ -->
+<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
     <div class="hamburger"><span></span><span></span><span></span></div>
@@ -464,7 +350,7 @@ vturb-smartplayer{display:block;width:100%;}
   <div class="header-sep"></div>
 </header>
 
-<!-- ══════════════════════ HEADLINE ══════════════════════ -->
+<!-- HEADLINE -->
 <section class="headline-section">
   <div class="headline-inner">
     <h1 class="main-headline">
@@ -481,11 +367,11 @@ vturb-smartplayer{display:block;width:100%;}
   </div>
 </section>
 
-<!-- ══════════════════════ VIDEO + SOCIAL PROOF ══════════════════════ -->
+<!-- VIDEO + SOCIAL PROOF -->
 <section class="video-section">
   <div class="video-inner">
     <div class="video-wrap">
-      <vturb-smartplayer id="vid-69c18bde596c6131b7434542" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+      <vturb-smartplayer id="vid-69c18bde596c6131b7434542" style="display:block;margin:0 auto;width:100%;max-width:400px;"></vturb-smartplayer>
     </div>
     <p class="watching-row"><span id="watching-now">500</span> people watching now...</p>
     <img
@@ -496,13 +382,13 @@ vturb-smartplayer{display:block;width:100%;}
   </div>
 </section>
 
-<!-- ══════════════════════ CTA + CARDS (hidden until delay) ══════════════════════ -->
+<!-- CTA + ORDER (hidden until delay) -->
 <div id="cta-block" class="esconder">
 
+  <!-- CTA BANNER with countdown -->
   <div class="cta-banner">
     <p class="cta-headline">
-      The Same Method Snoop Dogg Used:<br>
-      <span class="yellow"><strong>Get Your Discounted Pulmonex® Package Before It's Gone!</strong></span>
+      <span class="yellow"><strong>Claim your Discounted Pulmo Balance Below While Stock Lasts</strong></span>
     </p>
     <div class="countdown">
       <div class="cd-block"><span class="cd-digits" id="cd-min">30</span><span class="cd-label">min</span></div>
@@ -511,156 +397,38 @@ vturb-smartplayer{display:block;width:100%;}
     </div>
   </div>
 
-  <div class="cards-area">
+  <!-- ORDER SECTION: image + button -->
+  <div class="order-section" id="buy-now">
+    <div class="order-inner">
 
-    <!-- DESKTOP CARDS -->
-    <div class="cards-desktop">
-
-      <!-- Try Two -->
-      <div class="card">
-        <div class="card-head"><h3>Try Two</h3><div class="supply">60 Days Supply</div></div>
-        <div class="card-img-wrap"><a href="https://escalify-health.mycartpanda.com/checkout/205880855:1?afid=A8FU1mMEeW"><img src="https://prohealthdays.online/wp-content/uploads/2026/02/2-1.png" alt="2 Bottles" loading="lazy"></a></div>
-        <div class="card-body">
-          <div class="price-wrap"><span class="price-dollar">$</span><span class="price-num">89</span></div>
-          <div class="price-per">Per Bottle</div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>YOU SAVE $200</div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>180 Days Guarantee</div>
-          <div class="divider"></div>
-          <a class="btn-buy" href="https://escalify-health.mycartpanda.com/checkout/205880855:1?afid=A8FU1mMEeW">BUY NOW!<span class="sub">Basic Offer!</span></a>
-          <img class="payment-img" src="https://prohealthdays.online/wp-content/uploads/2026/02/cards-2-1.webp" alt="Payment" loading="lazy">
-          <div class="total-line">Total: <s>$377</s>&nbsp;<b>$177 + SHIPPING</b></div>
-        </div>
+      <!-- Image -->
+      <div class="order-img-wrap">
+        <img
+          src="https://lungreborn.com/assets/img/bottle-hand.webp"
+          alt="Pulmo Balance - Daily Lung Support"
+          width="550" height="550"
+          loading="eager"
+        >
       </div>
 
-      <!-- Best Value (featured) -->
-      <div class="card featured">
-        <div class="card-head grad-gold"><h3>Best Value!</h3><div class="supply">180 Days Supply</div></div>
-        <div class="card-img-wrap"><a href="https://escalify-health.mycartpanda.com/checkout/205880857:1?afid=A8FU1mMEeW"><img src="https://prohealthdays.online/wp-content/uploads/2026/02/6.png" alt="6 Bottles" loading="lazy"></a></div>
-        <div class="card-body">
-          <div class="price-wrap"><span class="price-dollar">$</span><span class="price-num">49</span></div>
-          <div class="price-per">Per Bottle</div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>YOU SAVE $780</div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>180 Days Guarantee</div>
-          <div class="divider"></div>
-          <a class="btn-buy" href="https://escalify-health.mycartpanda.com/checkout/205880857:1?afid=A8FU1mMEeW">BUY NOW!<span class="sub">Best Offer!</span></a>
-          <img class="payment-img" src="https://prohealthdays.online/wp-content/uploads/2026/02/cards-2-1.webp" alt="Payment" loading="lazy">
-          <div class="total-line">Total: <s>$1074</s>&nbsp;<b>$294</b></div>
-          <div class="free-ship-badge">+ FREE SHIPPING</div>
-        </div>
+      <!-- CTA -->
+      <div class="order-cta-wrap">
+        <p class="order-tagline">Limited Time Offer</p>
+        <h2 class="order-title">Get Your <span>Pulmo Balance</span><br>While Stock Lasts!</h2>
+        <a class="btn-order" href="https://102d7w2lzct8-fwfzdpcfyvyo7.hop.clickbank.net">
+          ORDER NOW!
+          <span class="btn-sub">Click here to claim your discount</span>
+        </a>
+        <p class="order-guarantee">
+          <svg viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
+          180-Day Money Back Guarantee
+        </p>
       </div>
 
-      <!-- Good Value -->
-      <div class="card">
-        <div class="card-head grad-green"><h3>Good Value</h3><div class="supply">90 Days Supply</div></div>
-        <div class="card-img-wrap"><a href="https://escalify-health.mycartpanda.com/checkout/205880856:1?afid=A8FU1mMEeW"><img src="https://prohealthdays.online/wp-content/uploads/2026/02/3-1.png" alt="3 Bottles" loading="lazy"></a></div>
-        <div class="card-body">
-          <div class="price-wrap"><span class="price-dollar">$</span><span class="price-num">72</span></div>
-          <div class="price-per">Per Bottle</div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>YOU SAVE $330</div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>180 Days Guarantee</div>
-          <div class="divider"></div>
-          <a class="btn-buy" href="https://escalify-health.mycartpanda.com/checkout/205880856:1?afid=A8FU1mMEeW">BUY NOW!<span class="sub">Good Value!</span></a>
-          <img class="payment-img" src="https://prohealthdays.online/wp-content/uploads/2026/02/cards-2-1.webp" alt="Payment" loading="lazy">
-          <div class="total-line">Total: <s>$547</s>&nbsp;<b>$217</b></div>
-          <div class="free-ship-badge">+ FREE SHIPPING</div>
-        </div>
-      </div>
+    </div>
+  </div>
 
-    </div><!-- /cards-desktop -->
-
-    <!-- MOBILE CARDS -->
-    <div class="cards-mobile" id="buy-now">
-
-      <!-- Best Value -->
-      <div class="m-card featured-m">
-        <div class="m-card-badge g-gold">⭐ Best Value!</div>
-        <div class="m-card-top">
-          <span class="bottles-num">6 BOTTLES</span>
-          <span class="supply-txt">180 Days Supply</span>
-          <a href="https://escalify-health.mycartpanda.com/checkout/205880857:1?afid=A8FU1mMEeW">
-            <img src="https://prohealthdays.online/wp-content/uploads/2026/02/6.png" alt="6 Bottles" loading="lazy">
-          </a>
-        </div>
-        <div class="m-card-details">
-          <div class="m-price-row"><span class="m-price-dollar">$</span><span class="m-price-num">49</span></div>
-          <div class="m-price-per">Per Bottle</div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>YOU <b>SAVE $780</b></div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>180 Days Guarantee</div>
-          <div class="divider"></div>
-          <img src="https://prohealthdays.online/wp-content/uploads/2026/02/cards-2-1.webp" alt="Payment" style="height:24px;margin:6px auto;" loading="lazy">
-        </div>
-        <div class="m-btn-area">
-          <a class="btn-buy" href="https://escalify-health.mycartpanda.com/checkout/205880857:1?afid=A8FU1mMEeW">BUY NOW!<span class="sub">Best Offer!</span></a>
-          <div class="m-total">TOTAL: <s>$1074</s> <b>$294</b></div>
-          <div class="free-ship-badge" style="margin-top:8px;">+ FREE SHIPPING</div>
-        </div>
-      </div>
-
-      <!-- Good Value -->
-      <div class="m-card">
-        <div class="m-card-badge g-green">Good Value!</div>
-        <div class="m-card-top">
-          <span class="bottles-num">3 BOTTLES</span>
-          <span class="supply-txt">90 Days Supply</span>
-          <a href="https://escalify-health.mycartpanda.com/checkout/205880856:1?afid=A8FU1mMEeW">
-            <img src="https://prohealthdays.online/wp-content/uploads/2026/02/3-1.png" alt="3 Bottles" loading="lazy">
-          </a>
-        </div>
-        <div class="m-card-details">
-          <div class="m-price-row"><span class="m-price-dollar">$</span><span class="m-price-num">72</span></div>
-          <div class="m-price-per">Per Bottle</div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>YOU <b>SAVE $330</b></div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>180 Days Guarantee</div>
-          <div class="divider"></div>
-          <img src="https://prohealthdays.online/wp-content/uploads/2026/02/cards-2-1.webp" alt="Payment" style="height:24px;margin:6px auto;" loading="lazy">
-        </div>
-        <div class="m-btn-area">
-          <a class="btn-buy" href="https://escalify-health.mycartpanda.com/checkout/205880856:1?afid=A8FU1mMEeW">BUY NOW!<span class="sub">Good Value!</span></a>
-          <div class="m-total">TOTAL: <s>$547</s> <b>$217</b></div>
-          <div class="free-ship-badge" style="margin-top:8px;">+ FREE SHIPPING</div>
-        </div>
-      </div>
-
-      <!-- Try Two -->
-      <div class="m-card">
-        <div class="m-card-badge">Try Two</div>
-        <div class="m-card-top">
-          <span class="bottles-num">2 BOTTLES</span>
-          <span class="supply-txt">60 Days Supply</span>
-          <a href="https://escalify-health.mycartpanda.com/checkout/205880855:1?afid=A8FU1mMEeW">
-            <img src="https://prohealthdays.online/wp-content/uploads/2026/02/2-1.png" alt="2 Bottles" loading="lazy">
-          </a>
-        </div>
-        <div class="m-card-details">
-          <div class="m-price-row"><span class="m-price-dollar">$</span><span class="m-price-num">89</span></div>
-          <div class="m-price-per">Per Bottle</div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>YOU <b>SAVE $200</b></div>
-          <div class="divider"></div>
-          <div class="check-row"><svg class="ico-check" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>180 Days Guarantee</div>
-          <div class="divider"></div>
-          <img src="https://prohealthdays.online/wp-content/uploads/2026/02/cards-2-1.webp" alt="Payment" style="height:24px;margin:6px auto;" loading="lazy">
-        </div>
-        <div class="m-btn-area">
-          <a class="btn-buy" href="https://escalify-health.mycartpanda.com/checkout/205880855:1?afid=A8FU1mMEeW">BUY NOW!<span class="sub">Basic Offer!</span></a>
-          <div class="m-total">TOTAL: <s>$377</s> <b>$177 + SHIPPING</b></div>
-        </div>
-      </div>
-
-    </div><!-- /cards-mobile -->
-  </div><!-- /cards-area -->
-
-  <!-- STICKY BAR — shown when CTA appears, all screens -->
+  <!-- STICKY BAR -->
   <div class="sticky-bar" id="sticky-bar">
     <div class="sticky-top-row">
       <span class="sticky-label">GET Free Shipping</span>
@@ -668,12 +436,12 @@ vturb-smartplayer{display:block;width:100%;}
         <span class="sticky-cd" id="sf-cd">30:00</span>
       </div>
     </div>
-    <a class="sticky-btn" href="#buy-now">YES! I Want Pulmonex®</a>
+    <a class="sticky-btn" href="#buy-now">YES! I Want Pulmo Balance</a>
   </div>
 
 </div><!-- /#cta-block -->
 
-<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-legal">
@@ -695,9 +463,8 @@ vturb-smartplayer{display:block;width:100%;}
   </div>
 </footer>
 
-<!-- ══════════════════════ SCRIPTS ══════════════════════ -->
+<!-- SCRIPTS -->
 <script>
-
 (function(){
   var s=document.createElement('script');
   s.src='https://scripts.converteai.net/aef86c86-2804-4c3c-a018-d1c18d0ace64/players/69c18bde596c6131b7434542/v4/player.js';
@@ -737,7 +504,7 @@ if(player){
   player.addEventListener('player:ready',function(){
     if(typeof player.displayHiddenElements==='function'){
       player.displayHiddenElements(DELAY,['#cta-block'],{persist:true});
-      setTimeout(function(){ stickyBar.classList.add('active'); }, DELAY*1000);
+      setTimeout(function(){ stickyBar.classList.add('active'); },DELAY*1000);
     } else {
       setTimeout(showCTA,DELAY*1000);
     }
