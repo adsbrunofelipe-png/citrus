@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>News</title>
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17059519097"></script>
 <script>
@@ -13,29 +9,15 @@
   gtag('js', new Date());
   gtag('config', 'AW-17059519097');
 </script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1GNHLDFCL0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1GNHLDFCL0');
-</script>
-
-<!-- Performance: preconnect critical origins -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>News</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://scripts.converteai.net">
-<link rel="preconnect" href="https://cdn.converteai.net">
-<link rel="dns-prefetch" href="https://prohealthdays.online">
-<link rel="dns-prefetch" href="https://www.googletagmanager.com">
-<link rel="dns-prefetch" href="https://cod.codevisita.com.br">
-<!-- Fonts: subset enxuto + swap para evitar FOIT -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;900&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
-<!-- Preload imagem crítica acima da dobra -->
-<link rel="preload" as="image" href="https://prohealthdays.online/wp-content/uploads/2026/02/imagem_2024-10-17_122200231-2-1-1-768x138.webp">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 <style>
+/* ═══════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
@@ -50,6 +32,9 @@ body{
 img{max-width:100%;height:auto;display:block;}
 a{text-decoration:none;color:inherit;}
 
+/* ═══════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════ */
 .site-header{
   background:#fff;
   position:sticky;
@@ -77,6 +62,9 @@ a{text-decoration:none;color:inherit;}
 .logo-health{font-size:14px;font-weight:500;color:#1a1a1a;padding-bottom:4px;letter-spacing:.3px;}
 .header-sep{height:2px;background:#e5e5e5;}
 
+/* ═══════════════════════════════════════════
+   HEADLINE SECTION
+═══════════════════════════════════════════ */
 .headline-section{padding:28px clamp(16px,5vw,50px) 0;}
 .headline-inner{max-width:660px;margin:0 auto;}
 .main-headline{
@@ -95,11 +83,17 @@ a{text-decoration:none;color:inherit;}
   margin-bottom:20px;
 }
 
+/* ═══════════════════════════════════════════
+   VIDEO SECTION
+═══════════════════════════════════════════ */
 .video-section{padding:0 clamp(16px,5vw,50px);}
 .video-inner{max-width:660px;margin:0 auto;}
 .video-wrap{max-width:420px;margin:0 auto 18px;width:100%;}
 vturb-smartplayer{display:block;width:100%;}
 
+/* ═══════════════════════════════════════════
+   WATCHING + TRUST
+═══════════════════════════════════════════ */
 .watching-row{
   font-size:1.1rem;
   font-weight:700;
@@ -110,9 +104,14 @@ vturb-smartplayer{display:block;width:100%;}
 .watching-row span{color:#cc0000;}
 .trust-badge{display:block;max-width:100%;margin:0 auto 0;}
 
+/* ═══════════════════════════════════════════
+   HIDDEN UNTIL VIDEO TIMER
+═══════════════════════════════════════════ */
 .esconder{display:none!important;}
 
-/* ── CTA BANNER ── */
+/* ═══════════════════════════════════════════
+   CTA BANNER
+═══════════════════════════════════════════ */
 .cta-banner{
   background:linear-gradient(135deg,#1a0533 0%,#2d0a5a 50%,#1a0533 100%);
   padding:22px clamp(16px,5vw,50px) 16px;
@@ -127,6 +126,7 @@ vturb-smartplayer{display:block;width:100%;}
 }
 .cta-headline .yellow{color:#ffe600;}
 
+/* countdown */
 .countdown{
   display:inline-flex;
   align-items:center;
@@ -151,206 +151,328 @@ vturb-smartplayer{display:block;width:100%;}
 .cd-label{font-size:.65rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.05em;}
 .cd-sep{font-size:2rem;font-weight:900;color:#ffe600;line-height:1;}
 
-/* ── ORDER SECTION ── */
-.order-section{
-  background:#edf1fb;
-  padding:48px clamp(16px,5vw,48px) 56px;
+/* ═══════════════════════════════════════════
+   CARDS AREA — new aesthetic matching reference
+═══════════════════════════════════════════ */
+.cards-area{
+  background:#f5f2e8;
+  padding:40px clamp(12px,4vw,32px) 60px;
 }
-.order-inner{
-  max-width:860px;
+
+/* ── DESKTOP 3-col grid ── */
+.cards-desktop{
+  display:grid;
+  grid-template-columns:1fr 1.08fr 1fr;
+  gap:20px;
+  max-width:1060px;
   margin:0 auto;
-  display:flex;
   align-items:center;
-  justify-content:center;
-  gap:48px;
 }
-@media(max-width:640px){
-  .order-inner{
-    flex-direction:column;
-    gap:28px;
-  }
+@media(max-width:767px){.cards-desktop{display:none;}}
+
+/* ── MOBILE single-col ── */
+.cards-mobile{display:none;}
+@media(max-width:767px){.cards-mobile{display:block;max-width:500px;margin:0 auto;}}
+
+/* ── CARD BASE (new style) ── */
+.card{
+  background:#fff;
+  border-radius:16px;
+  border:2px solid #b8d4a0;
+  overflow:visible;
+  display:flex;
+  flex-direction:column;
+  transition:transform .22s ease,box-shadow .22s ease;
+  box-shadow:0 4px 18px rgba(0,0,0,.07);
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.12);}
+.card.featured{
+  border:3px solid #2d5a1b;
+  box-shadow:0 10px 40px rgba(45,90,27,.25);
+  transform:scale(1.04);
+  z-index:2;
+  position:relative;
+}
+.card.featured:hover{transform:scale(1.06) translateY(-4px);}
+
+/* card header */
+.card-head{
+  padding:16px 14px 12px;
+  text-align:center;
+  background:#d4e8c0;
+  border-radius:14px 14px 0 0;
+}
+.card-head.head-featured{
+  background:#1e3d0f;
+}
+.card-head h3{
+  font-size:1.25rem;
+  font-weight:800;
+  color:#1e3d0f;
+  line-height:1.2;
+  margin-bottom:3px;
+}
+.card-head.head-featured h3{
+  color:#fff;
+}
+.card-head .supply{
+  font-size:.85rem;
+  font-weight:400;
+  color:#4a7a30;
+}
+.card-head.head-featured .supply{
+  color:rgba(255,255,255,.75);
 }
 
-/* image side */
-.order-img-wrap{
-  flex:0 0 auto;
+/* card image */
+.card-img-wrap{
+  padding:28px 28px 10px;
+  text-align:center;
+  background:#fff;
 }
-.order-img-wrap img{
-  width:clamp(220px,40vw,340px);
-  height:auto;
-  border-radius:18px;
-  box-shadow:0 8px 40px rgba(9,104,246,.12);
+.card-img-wrap img{
+  margin:0 auto;
+  width:100%;
+  max-height:240px;
+  object-fit:contain;
+  transition:transform .2s;
 }
+.card-img-wrap a:hover img{transform:scale(1.04);}
 
-/* CTA side */
-.order-cta-wrap{
+/* card body */
+.card-body{
+  padding:14px 22px 24px;
   flex:1;
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
-  gap:0;
-}
-@media(max-width:640px){
-  .order-cta-wrap{
-    align-items:center;
-    text-align:center;
-    width:100%;
-  }
+  align-items:center;
+  background:#fff;
+  border-radius:0 0 14px 14px;
 }
 
-.order-tagline{
-  font-size:clamp(.85rem,2vw,1rem);
-  font-weight:600;
-  color:#0968f6;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  margin-bottom:10px;
-}
-.order-title{
-  font-family:'Roboto Slab','Roboto',sans-serif;
-  font-size:clamp(1.3rem,3.5vw,2rem);
+/* price */
+.price-wrap{display:flex;align-items:baseline;gap:2px;margin-bottom:0;}
+.price-dollar{font-size:2rem;font-weight:800;color:#111;line-height:1;}
+.price-num{font-size:5.5rem;font-weight:900;color:#111;line-height:1;letter-spacing:-.03em;}
+.price-per{font-size:.9rem;color:#666;margin-bottom:14px;text-align:center;font-weight:500;}
+
+/* bonus badge */
+.bonus-badge{
+  background:#e8715a;
+  color:#fff;
+  font-size:.78rem;
   font-weight:700;
-  color:#1a2540;
-  line-height:1.25;
-  margin-bottom:18px;
-}
-.order-title span{color:#0968f6;}
-
-/* pulsing ORDER NOW button */
-@keyframes btn-pulse{
-  0%  {box-shadow:0 0 0 0 rgba(9,104,246,.55),0 6px 24px rgba(9,104,246,.4);}
-  65% {box-shadow:0 0 0 14px rgba(9,104,246,0),0 6px 24px rgba(9,104,246,.4);}
-  100%{box-shadow:0 0 0 0 rgba(9,104,246,0),0 6px 24px rgba(9,104,246,.4);}
-}
-.btn-order{
-  display:inline-block;
-  padding:18px 44px;
-  background:linear-gradient(180deg,#3d8eff 0%,#0968f6 45%,#0550c8 100%);
-  color:#fff!important;
-  font-size:1.2rem;
-  font-weight:900;
   text-align:center;
-  border-radius:14px;
+  padding:5px 14px;
+  border-radius:6px;
+  margin-bottom:14px;
   letter-spacing:.06em;
   text-transform:uppercase;
-  cursor:pointer;
-  animation:btn-pulse 1.8s ease-out infinite;
-  transition:filter .15s,transform .15s;
-  line-height:1.2;
+  width:100%;
 }
-.btn-order:hover{
-  filter:brightness(1.1);
-  transform:scale(1.04);
-}
-.btn-order .btn-sub{
+
+/* buy button */
+.btn-buy{
   display:block;
-  font-size:.78rem;
-  font-weight:500;
-  text-transform:none;
-  opacity:.88;
-  margin-top:4px;
-  letter-spacing:.02em;
+  width:100%;
+  margin:4px 0 10px;
+  padding:17px 14px;
+  background:#f5d000;
+  color:#111!important;
+  font-size:1.15rem;
+  font-weight:900;
+  text-align:center;
+  border-radius:10px;
+  line-height:1.2;
+  transition:transform .15s,box-shadow .15s,filter .15s;
+  cursor:pointer;
+  letter-spacing:.04em;
+  box-shadow:0 4px 14px rgba(0,0,0,.15);
+  text-transform:uppercase;
+  border:none;
+}
+.btn-buy:hover{
+  transform:scale(1.03);
+  box-shadow:0 8px 22px rgba(0,0,0,.2);
+  filter:brightness(1.05);
 }
 
-.order-guarantee{
-  margin-top:14px;
-  font-size:.8rem;
-  color:#666;
+.guarantee-row{
+  font-size:.85rem;
+  font-weight:700;
+  color:#1e3d0f;
+  text-align:center;
+  margin:6px 0 10px;
+}
+
+.payment-img{height:28px;margin:0 auto 10px;}
+
+.total-line{
+  font-size:.87rem;
+  color:#555;
+  text-align:center;
+  line-height:1.7;
+}
+.total-line s{color:#aaa;}
+.total-line b{color:#111;font-weight:700;}
+
+.free-ship-txt{
+  font-size:.85rem;
+  color:#555;
+  font-weight:400;
+  display:block;
+  text-align:center;
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE CARD STYLE
+═══════════════════════════════════════════ */
+.m-card{
+  background:#fff;
+  border-radius:16px;
+  border:2px solid #b8d4a0;
+  overflow:hidden;
+  margin-bottom:22px;
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
+}
+.m-card.featured-m{
+  border:3px solid #2d5a1b;
+  box-shadow:0 6px 28px rgba(45,90,27,.2);
+}
+
+.m-card-badge{
+  text-align:center;
+  font-weight:800;
+  font-size:1.05rem;
+  padding:14px 14px 10px;
+  background:#d4e8c0;
+  color:#1e3d0f;
+}
+.m-card-badge.g-featured{
+  background:#1e3d0f;
+  color:#fff;
+}
+.m-card-badge .m-supply{
+  display:block;
+  font-size:.82rem;
+  font-weight:400;
+  color:#4a7a30;
+  margin-top:2px;
+}
+.m-card-badge.g-featured .m-supply{
+  color:rgba(255,255,255,.7);
+}
+
+.m-card-top{
   display:flex;
+  flex-direction:column;
   align-items:center;
-  gap:6px;
+  padding:20px 24px 12px;
+  background:#fff;
 }
-.order-guarantee svg{width:18px;height:18px;fill:#2e7d32;flex-shrink:0;}
+.m-card-top img{
+  width:100%;
+  max-width:280px;
+  max-height:200px;
+  object-fit:contain;
+  margin:0 auto;
+}
 
-/* ── STICKY BAR ── */
+.m-card-details{
+  padding:4px 22px 4px;
+  background:#fff;
+}
+.m-price-row{display:flex;align-items:baseline;gap:2px;justify-content:center;margin-bottom:2px;}
+.m-price-dollar{font-size:2rem;font-weight:800;color:#111;}
+.m-price-num{font-size:5rem;font-weight:900;color:#111;line-height:1;letter-spacing:-.03em;}
+.m-price-per{font-size:.85rem;color:#666;text-align:center;margin-bottom:10px;font-weight:500;}
+
+.m-bonus-badge{
+  background:#e8715a;
+  color:#fff;
+  font-size:.78rem;
+  font-weight:700;
+  text-align:center;
+  padding:5px 14px;
+  border-radius:6px;
+  margin-bottom:12px;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+
+.m-btn-area{
+  padding:0 22px 24px;
+  background:#fff;
+  text-align:center;
+}
+.m-guarantee{font-size:.8rem;font-weight:700;color:#1e3d0f;margin-bottom:4px;}
+.m-total{font-size:.85rem;color:#555;line-height:1.6;}
+.m-total b{color:#111;}
+
+/* ═══════════════════════════════════════════
+   STICKY BAR
+═══════════════════════════════════════════ */
 .sticky-bar{
-  display:none;
   position:fixed;
-  bottom:0;left:0;right:0;
-  z-index:9999;
-  background:#0a0a0a;
-  border-top:2px solid #c9a227;
-  box-shadow:0 -4px 24px rgba(0,0,0,.55),inset 0 1px 0 rgba(201,162,39,.25);
-  padding:10px 16px 12px;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  border-top:2px solid #e5e5e5;
+  padding:10px 15px;
+  display:flex;
   flex-direction:column;
   align-items:center;
   gap:8px;
+  z-index:1000;
+  transform:translateY(100%);
+  transition:transform .4s ease;
+  box-shadow:0 -4px 15px rgba(0,0,0,.1);
 }
-.sticky-bar.active{display:flex;}
-.sticky-top-row{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  width:100%;
-}
-.sticky-label{color:#fff;font-size:1rem;font-weight:700;letter-spacing:.02em;white-space:nowrap;}
-.sticky-cd-wrap{
-  display:flex;
-  align-items:center;
-  gap:4px;
-  background:rgba(255,255,255,.08);
-  border-radius:6px;
-  padding:3px 10px;
-}
-.sticky-cd{
-  color:#fff;
-  font-weight:900;
-  font-size:1.15rem;
-  font-variant-numeric:tabular-nums;
-  letter-spacing:.06em;
-  min-width:52px;
-  text-align:center;
-}
-@keyframes pulse-glow{
-  0%  {box-shadow:0 0 0 0 rgba(0,210,180,.55),0 4px 18px rgba(0,0,0,.5);}
-  60% {box-shadow:0 0 0 10px rgba(0,210,180,0),0 4px 18px rgba(0,0,0,.5);}
-  100%{box-shadow:0 0 0 0 rgba(0,210,180,0),0 4px 18px rgba(0,0,0,.5);}
-}
+.sticky-bar.active{transform:translateY(0);}
+.sticky-top-row{display:flex;align-items:center;gap:10px;}
+.sticky-label{font-size:.85rem;font-weight:700;color:#333;text-transform:uppercase;}
+.sticky-cd-wrap{background:#cc0000;color:#fff;padding:2px 8px;border-radius:4px;font-weight:700;font-size:.9rem;}
 .sticky-btn{
-  display:block;
+  background:#f5d000;
+  color:#111!important;
+  font-weight:900;
+  font-size:1.1rem;
+  padding:12px 0;
   width:100%;
-  max-width:480px;
-  padding:14px 20px;
-  background:linear-gradient(180deg,#00d4c8 0%,#0099b0 45%,#006e8a 100%);
-  color:#fff!important;
-  font-size:1.05rem;
-  font-weight:800;
+  max-width:400px;
   text-align:center;
-  border-radius:10px;
-  border:2px solid #c9a227;
-  letter-spacing:.03em;
-  cursor:pointer;
-  animation:pulse-glow 1.8s ease-out infinite;
-  text-shadow:0 1px 3px rgba(0,0,0,.3);
-  box-shadow:0 4px 18px rgba(0,0,0,.5);
+  border-radius:8px;
+  text-transform:uppercase;
+  box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
-/* ── FOOTER ── */
-.site-footer{background:#f0f0f0;padding:32px clamp(16px,5vw,50px) 24px;}
-.footer-inner{max-width:660px;margin:0 auto;}
-.footer-legal{font-size:.78rem;color:#666;line-height:1.75;margin-bottom:18px;}
-.footer-legal strong{color:#333;}
-.footer-links{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:14px;}
-.footer-links a{font-size:.8rem;color:#333;text-decoration:underline;}
-.footer-copy{font-size:.75rem;color:#888;}
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+.site-footer{background:#f9f9f9;padding:60px 20px;border-top:1px solid #eee;color:#666;}
+.footer-inner{max-width:1000px;margin:0 auto;text-align:center;}
+.footer-legal{font-size:12px;line-height:1.8;margin-bottom:40px;text-align:justify;}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:15px 25px;margin-bottom:30px;}
+.footer-links a{font-size:13px;font-weight:500;color:#444;text-decoration:underline;}
+.footer-copy{font-size:13px;color:#999;}
+
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
     <div class="hamburger"><span></span><span></span><span></span></div>
     <div class="logo-text">
       <span class="logo-phd">PHD</span>
-      <span class="logo-health">Health</span>
+      <span class="logo-health">HEALTH</span>
     </div>
   </div>
   <div class="header-sep"></div>
 </header>
 
-<!-- HEADLINE -->
+<!-- ══════════════════════ HEADLINE ══════════════════════ -->
 <section class="headline-section">
   <div class="headline-inner">
     <h1 class="main-headline">
@@ -367,11 +489,11 @@ vturb-smartplayer{display:block;width:100%;}
   </div>
 </section>
 
-<!-- VIDEO + SOCIAL PROOF -->
+<!-- ══════════════════════ VIDEO + SOCIAL PROOF ══════════════════════ -->
 <section class="video-section">
   <div class="video-inner">
     <div class="video-wrap">
-      <vturb-smartplayer id="vid-69c18bde596c6131b7434542" style="display:block;margin:0 auto;width:100%;max-width:400px;"></vturb-smartplayer>
+      <vturb-smartplayer id="vid-69c18bde596c6131b7434542" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
     </div>
     <p class="watching-row"><span id="watching-now">500</span> people watching now...</p>
     <img
@@ -382,13 +504,13 @@ vturb-smartplayer{display:block;width:100%;}
   </div>
 </section>
 
-<!-- CTA + ORDER (hidden until delay) -->
+<!-- ══════════════════════ CTA + CARDS ══════════════════════ -->
 <div id="cta-block" class="esconder">
 
-  <!-- CTA BANNER with countdown -->
   <div class="cta-banner">
     <p class="cta-headline">
-      <span class="yellow"><strong>Claim your Discounted Pulmo Balance Below While Stock Lasts</strong></span>
+      The Same Method Snoop Dogg Used:<br>
+      <span class="yellow"><strong>Get Your Discounted Pulmo Balance® Package Before It's Gone!</strong></span>
     </p>
     <div class="countdown">
       <div class="cd-block"><span class="cd-digits" id="cd-min">30</span><span class="cd-label">min</span></div>
@@ -397,36 +519,163 @@ vturb-smartplayer{display:block;width:100%;}
     </div>
   </div>
 
-  <!-- ORDER SECTION: image + button -->
-  <div class="order-section" id="buy-now">
-    <div class="order-inner">
+  <div class="cards-area">
 
-      <!-- Image -->
-      <div class="order-img-wrap">
-        <img
-          src="https://lungreborn.com/assets/img/bottle-hand.webp"
-          alt="Pulmo Balance - Daily Lung Support"
-          width="550" height="550"
-          loading="eager"
-        >
+    <!-- DESKTOP CARDS -->
+    <div class="cards-desktop">
+
+      <!-- Try Two -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Try Two</h3>
+          <div class="supply">60 Days, 2 Bottles</div>
+        </div>
+        <div class="card-img-wrap">
+          <a href="https://pulmobalan.pay.clickbank.net/?cbitems=1&cbfid=62165&template=two&exitoffer=exit">
+            <img src="https://lungreborn.com/assets/img/PRODx2-500px.webp" alt="2 Bottles" loading="lazy">
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="price-wrap"><span class="price-dollar">$</span><span class="price-num">79</span></div>
+          <div class="price-per">/ Bottle</div>
+          <a class="btn-buy" href="https://pulmobalan.pay.clickbank.net/?cbitems=1&cbfid=62165&template=two&exitoffer=exit">BUY NOW</a>
+          <div class="guarantee-row">90 Day Money-Back Guarantee</div>
+          <img class="payment-img" src="https://lungreborn.com/assets/img/cards.webp" alt="Payment" loading="lazy">
+          <div class="total-line">
+            TOTAL: <b>$158</b><br>
+            <span class="free-ship-txt">+ SHIPPING</span>
+          </div>
+        </div>
       </div>
 
-      <!-- CTA -->
-      <div class="order-cta-wrap">
-        <p class="order-tagline">Limited Time Offer</p>
-        <h2 class="order-title">Get Your <span>Pulmo Balance</span><br>While Stock Lasts!</h2>
-        <a class="btn-order" href="https://102d7w2lzct8-fwfzdpcfyvyo7.hop.clickbank.net">
-          ORDER NOW!
-          <span class="btn-sub">Click here to claim your discount</span>
-        </a>
-        <p class="order-guarantee">
-          <svg viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
-          180-Day Money Back Guarantee
-        </p>
+      <!-- Best Value (featured) -->
+      <div class="card featured">
+        <div class="card-head head-featured">
+          <h3>Best Value</h3>
+          <div class="supply">180 Days, 6 Bottles</div>
+        </div>
+        <div class="card-img-wrap">
+          <a href="https://pulmobalan.pay.clickbank.net/?cbitems=3&cbfid=62166&template=six&exitoffer=exit">
+            <img src="https://lungreborn.com/assets/img/PRODx6-500px.webp" alt="6 Bottles" loading="lazy">
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="price-wrap"><span class="price-dollar">$</span><span class="price-num">49</span></div>
+          <div class="price-per">/ Bottle</div>
+          <div class="bonus-badge">+ 2 FREE BONUSES</div>
+          <a class="btn-buy" href="https://pulmobalan.pay.clickbank.net/?cbitems=3&cbfid=62166&template=six&exitoffer=exit">BUY NOW</a>
+          <div class="guarantee-row">90 Day Money-Back Guarantee</div>
+          <img class="payment-img" src="https://lungreborn.com/assets/img/cards.webp" alt="Payment" loading="lazy">
+          <div class="total-line">
+            TOTAL: <b>$294</b><br>
+            <span class="free-ship-txt">+ FREE US SHIPPING</span>
+          </div>
+        </div>
       </div>
 
-    </div>
-  </div>
+      <!-- Most Popular -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Most Popular</h3>
+          <div class="supply">90 Days, 3 Bottles</div>
+        </div>
+        <div class="card-img-wrap">
+          <a href="https://pulmobalan.pay.clickbank.net/?cbitems=2&cbfid=62164&template=three&exitoffer=exit">
+            <img src="https://lungreborn.com/assets/img/PRODx3-500px.webp" alt="3 Bottles" loading="lazy">
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="price-wrap"><span class="price-dollar">$</span><span class="price-num">59</span></div>
+          <div class="price-per">/ Bottle</div>
+          <div class="bonus-badge">+ 2 FREE BONUSES</div>
+          <a class="btn-buy" href="https://pulmobalan.pay.clickbank.net/?cbitems=2&cbfid=62164&template=three&exitoffer=exit">BUY NOW</a>
+          <div class="guarantee-row">90 Day Money-Back Guarantee</div>
+          <img class="payment-img" src="https://lungreborn.com/assets/img/cards.webp" alt="Payment" loading="lazy">
+          <div class="total-line">
+            TOTAL: <b>$177</b><br>
+            <span class="free-ship-txt">+ FREE US SHIPPING</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /cards-desktop -->
+
+    <!-- MOBILE CARDS (order: Best Value, Most Popular, Try Two) -->
+    <div class="cards-mobile" id="buy-now">
+
+      <!-- Best Value -->
+      <div class="m-card featured-m">
+        <div class="m-card-badge g-featured">
+          Best Value
+          <span class="m-supply">180 Days, 6 Bottles</span>
+        </div>
+        <div class="m-card-top">
+          <a href="https://pulmobalan.pay.clickbank.net/?cbitems=3&cbfid=62166&template=six&exitoffer=exit">
+            <img src="https://lungreborn.com/assets/img/PRODx6-500px.webp" alt="6 Bottles" loading="lazy">
+          </a>
+        </div>
+        <div class="m-card-details">
+          <div class="m-price-row"><span class="m-price-dollar">$</span><span class="m-price-num">49</span></div>
+          <div class="m-price-per">/ Bottle</div>
+          <div class="m-bonus-badge">+ 2 FREE BONUSES</div>
+        </div>
+        <div class="m-btn-area">
+          <a class="btn-buy" href="https://pulmobalan.pay.clickbank.net/?cbitems=3&cbfid=62166&template=six&exitoffer=exit">BUY NOW</a>
+          <div class="m-guarantee">90 Day Money-Back Guarantee</div>
+          <img src="https://lungreborn.com/assets/img/cards.webp" alt="Payment" style="height:26px;margin:6px auto;" loading="lazy">
+          <div class="m-total">TOTAL: <b>$294</b><br><span class="free-ship-txt">+ FREE US SHIPPING</span></div>
+        </div>
+      </div>
+
+      <!-- Most Popular -->
+      <div class="m-card">
+        <div class="m-card-badge">
+          Most Popular
+          <span class="m-supply">90 Days, 3 Bottles</span>
+        </div>
+        <div class="m-card-top">
+          <a href="https://pulmobalan.pay.clickbank.net/?cbitems=2&cbfid=62164&template=three&exitoffer=exit">
+            <img src="https://lungreborn.com/assets/img/PRODx3-500px.webp" alt="3 Bottles" loading="lazy">
+          </a>
+        </div>
+        <div class="m-card-details">
+          <div class="m-price-row"><span class="m-price-dollar">$</span><span class="m-price-num">59</span></div>
+          <div class="m-price-per">/ Bottle</div>
+          <div class="m-bonus-badge">+ 2 FREE BONUSES</div>
+        </div>
+        <div class="m-btn-area">
+          <a class="btn-buy" href="https://pulmobalan.pay.clickbank.net/?cbitems=2&cbfid=62164&template=three&exitoffer=exit">BUY NOW</a>
+          <div class="m-guarantee">90 Day Money-Back Guarantee</div>
+          <img src="https://lungreborn.com/assets/img/cards.webp" alt="Payment" style="height:26px;margin:6px auto;" loading="lazy">
+          <div class="m-total">TOTAL: <b>$177</b><br><span class="free-ship-txt">+ FREE US SHIPPING</span></div>
+        </div>
+      </div>
+
+      <!-- Try Two -->
+      <div class="m-card">
+        <div class="m-card-badge">
+          Try Two
+          <span class="m-supply">60 Days, 2 Bottles</span>
+        </div>
+        <div class="m-card-top">
+          <a href="https://pulmobalan.pay.clickbank.net/?cbitems=1&cbfid=62165&template=two&exitoffer=exit">
+            <img src="https://lungreborn.com/assets/img/PRODx2-500px.webp" alt="2 Bottles" loading="lazy">
+          </a>
+        </div>
+        <div class="m-card-details">
+          <div class="m-price-row"><span class="m-price-dollar">$</span><span class="m-price-num">79</span></div>
+          <div class="m-price-per">/ Bottle</div>
+        </div>
+        <div class="m-btn-area">
+          <a class="btn-buy" href="https://pulmobalan.pay.clickbank.net/?cbitems=1&cbfid=62165&template=two&exitoffer=exit">BUY NOW</a>
+          <div class="m-guarantee">90 Day Money-Back Guarantee</div>
+          <img src="https://lungreborn.com/assets/img/cards.webp" alt="Payment" style="height:26px;margin:6px auto;" loading="lazy">
+          <div class="m-total">TOTAL: <b>$158</b><br><span class="free-ship-txt">+ SHIPPING</span></div>
+        </div>
+      </div>
+
+    </div><!-- /cards-mobile -->
+  </div><!-- /cards-area -->
 
   <!-- STICKY BAR -->
   <div class="sticky-bar" id="sticky-bar">
@@ -436,12 +685,12 @@ vturb-smartplayer{display:block;width:100%;}
         <span class="sticky-cd" id="sf-cd">30:00</span>
       </div>
     </div>
-    <a class="sticky-btn" href="#buy-now">YES! I Want Pulmo Balance</a>
+    <a class="sticky-btn" href="#buy-now">YES! I Want Pulmo Balance®</a>
   </div>
 
 </div><!-- /#cta-block -->
 
-<!-- FOOTER -->
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-legal">
@@ -463,8 +712,9 @@ vturb-smartplayer{display:block;width:100%;}
   </div>
 </footer>
 
-<!-- SCRIPTS -->
+<!-- ══════════════════════ SCRIPTS ══════════════════════ -->
 <script>
+/* Vturb Player */
 (function(){
   var s=document.createElement('script');
   s.src='https://scripts.converteai.net/aef86c86-2804-4c3c-a018-d1c18d0ace64/players/69c18bde596c6131b7434542/v4/player.js';
@@ -472,6 +722,7 @@ vturb-smartplayer{display:block;width:100%;}
   document.head.appendChild(s);
 })();
 
+/* Watching counter */
 var watchEl=document.getElementById('watching-now'),count=500;
 function tickW(){
   var r=Math.random(),inc=r<.70?Math.floor(Math.random()*6)+3:r<.95?Math.floor(Math.random()*11)+10:Math.floor(Math.random()*16)+25;
@@ -480,6 +731,7 @@ function tickW(){
 }
 tickW();
 
+/* Countdown 30min evergreen */
 var cdMin=document.getElementById('cd-min'),cdSec=document.getElementById('cd-sec'),sfCd=document.getElementById('sf-cd'),total=30*60;
 function tickC(){
   var m=Math.floor(total/60),s=total%60;
@@ -489,6 +741,7 @@ function tickC(){
 }
 tickC();
 
+/* Show CTA after video delay */
 var DELAY=1042;
 var ctaBlock=document.getElementById('cta-block');
 var stickyBar=document.getElementById('sticky-bar');
@@ -504,7 +757,7 @@ if(player){
   player.addEventListener('player:ready',function(){
     if(typeof player.displayHiddenElements==='function'){
       player.displayHiddenElements(DELAY,['#cta-block'],{persist:true});
-      setTimeout(function(){ stickyBar.classList.add('active'); },DELAY*1000);
+      setTimeout(function(){ stickyBar.classList.add('active'); }, DELAY*1000);
     } else {
       setTimeout(showCTA,DELAY*1000);
     }
