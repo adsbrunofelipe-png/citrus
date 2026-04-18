@@ -489,7 +489,7 @@ function tickC(){
 }
 tickC();
 
-var DELAY=1042;
+var DELAY=1040;
 var ctaBlock=document.getElementById('cta-block');
 var stickyBar=document.getElementById('sticky-bar');
 
@@ -499,18 +499,7 @@ function showCTA(){
   stickyBar.classList.add('active');
 }
 
-var player=document.querySelector('vturb-smartplayer#vid-69e280e0081db0f7b1d11bfc');
-if(player){
-  player.addEventListener('player:ready',function(){
-    if(typeof player.displayHiddenElements==='function'){
-      player.displayHiddenElements(DELAY,['#cta-block'],{persist:true});
-      setTimeout(function(){ stickyBar.classList.add('active'); },DELAY*1000);
-    } else {
-      setTimeout(showCTA,DELAY*1000);
-    }
-  });
-  setTimeout(showCTA,(DELAY+5)*1000);
-}
+setTimeout(showCTA, DELAY*1000);
 </script>
 <script defer src="https://cod.codevisita.com.br/code/3569-e7a694c2-9515-4014-95c6-5c16b173eb29"></script>
 </body>
