@@ -110,222 +110,6 @@ vturb-smartplayer{display:block;width:100%;}
 .watching-row span{color:#cc0000;}
 .trust-badge{display:block;max-width:100%;margin:0 auto 0;}
 
-.esconder{display:none!important;}
-
-/* ── CTA BANNER ── */
-.cta-banner{
-  background:linear-gradient(135deg,#1a0533 0%,#2d0a5a 50%,#1a0533 100%);
-  padding:22px clamp(16px,5vw,50px) 16px;
-  text-align:center;
-}
-.cta-headline{
-  font-size:clamp(1rem,3.5vw,1.45rem);
-  font-weight:700;
-  line-height:1.35;
-  color:#fff;
-  margin-bottom:10px;
-}
-.cta-headline .yellow{color:#ffe600;}
-
-.countdown{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  background:rgba(0,0,0,.3);
-  border-radius:10px;
-  padding:8px 18px;
-  margin-bottom:0;
-}
-.cd-block{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  min-width:52px;
-}
-.cd-digits{
-  font-size:2.4rem;
-  font-weight:900;
-  color:#fff;
-  line-height:1;
-}
-.cd-label{font-size:.65rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.05em;}
-.cd-sep{font-size:2rem;font-weight:900;color:#ffe600;line-height:1;}
-
-/* ── ORDER SECTION ── */
-.order-section{
-  background:#edf1fb;
-  padding:48px clamp(16px,5vw,48px) 56px;
-}
-.order-inner{
-  max-width:860px;
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:48px;
-}
-@media(max-width:640px){
-  .order-inner{
-    flex-direction:column;
-    gap:28px;
-  }
-}
-
-/* image side */
-.order-img-wrap{
-  flex:0 0 auto;
-}
-.order-img-wrap img{
-  width:clamp(220px,40vw,340px);
-  height:auto;
-  border-radius:18px;
-  box-shadow:0 8px 40px rgba(9,104,246,.12);
-}
-
-/* CTA side */
-.order-cta-wrap{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:0;
-}
-@media(max-width:640px){
-  .order-cta-wrap{
-    align-items:center;
-    text-align:center;
-    width:100%;
-  }
-}
-
-.order-tagline{
-  font-size:clamp(.85rem,2vw,1rem);
-  font-weight:600;
-  color:#0968f6;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  margin-bottom:10px;
-}
-.order-title{
-  font-family:'Roboto Slab','Roboto',sans-serif;
-  font-size:clamp(1.3rem,3.5vw,2rem);
-  font-weight:700;
-  color:#1a2540;
-  line-height:1.25;
-  margin-bottom:18px;
-}
-.order-title span{color:#0968f6;}
-
-/* pulsing ORDER NOW button */
-@keyframes btn-pulse{
-  0%  {box-shadow:0 0 0 0 rgba(9,104,246,.55),0 6px 24px rgba(9,104,246,.4);}
-  65% {box-shadow:0 0 0 14px rgba(9,104,246,0),0 6px 24px rgba(9,104,246,.4);}
-  100%{box-shadow:0 0 0 0 rgba(9,104,246,0),0 6px 24px rgba(9,104,246,.4);}
-}
-.btn-order{
-  display:inline-block;
-  padding:18px 44px;
-  background:linear-gradient(180deg,#3d8eff 0%,#0968f6 45%,#0550c8 100%);
-  color:#fff!important;
-  font-size:1.2rem;
-  font-weight:900;
-  text-align:center;
-  border-radius:14px;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  cursor:pointer;
-  animation:btn-pulse 1.8s ease-out infinite;
-  transition:filter .15s,transform .15s;
-  line-height:1.2;
-}
-.btn-order:hover{
-  filter:brightness(1.1);
-  transform:scale(1.04);
-}
-.btn-order .btn-sub{
-  display:block;
-  font-size:.78rem;
-  font-weight:500;
-  text-transform:none;
-  opacity:.88;
-  margin-top:4px;
-  letter-spacing:.02em;
-}
-
-.order-guarantee{
-  margin-top:14px;
-  font-size:.8rem;
-  color:#666;
-  display:flex;
-  align-items:center;
-  gap:6px;
-}
-.order-guarantee svg{width:18px;height:18px;fill:#2e7d32;flex-shrink:0;}
-
-/* ── STICKY BAR ── */
-.sticky-bar{
-  display:none;
-  position:fixed;
-  bottom:0;left:0;right:0;
-  z-index:9999;
-  background:#0a0a0a;
-  border-top:2px solid #c9a227;
-  box-shadow:0 -4px 24px rgba(0,0,0,.55),inset 0 1px 0 rgba(201,162,39,.25);
-  padding:10px 16px 12px;
-  flex-direction:column;
-  align-items:center;
-  gap:8px;
-}
-.sticky-bar.active{display:flex;}
-.sticky-top-row{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  width:100%;
-}
-.sticky-label{color:#fff;font-size:1rem;font-weight:700;letter-spacing:.02em;white-space:nowrap;}
-.sticky-cd-wrap{
-  display:flex;
-  align-items:center;
-  gap:4px;
-  background:rgba(255,255,255,.08);
-  border-radius:6px;
-  padding:3px 10px;
-}
-.sticky-cd{
-  color:#fff;
-  font-weight:900;
-  font-size:1.15rem;
-  font-variant-numeric:tabular-nums;
-  letter-spacing:.06em;
-  min-width:52px;
-  text-align:center;
-}
-@keyframes pulse-glow{
-  0%  {box-shadow:0 0 0 0 rgba(0,210,180,.55),0 4px 18px rgba(0,0,0,.5);}
-  60% {box-shadow:0 0 0 10px rgba(0,210,180,0),0 4px 18px rgba(0,0,0,.5);}
-  100%{box-shadow:0 0 0 0 rgba(0,210,180,0),0 4px 18px rgba(0,0,0,.5);}
-}
-.sticky-btn{
-  display:block;
-  width:100%;
-  max-width:480px;
-  padding:14px 20px;
-  background:linear-gradient(180deg,#00d4c8 0%,#0099b0 45%,#006e8a 100%);
-  color:#fff!important;
-  font-size:1.05rem;
-  font-weight:800;
-  text-align:center;
-  border-radius:10px;
-  border:2px solid #c9a227;
-  letter-spacing:.03em;
-  cursor:pointer;
-  animation:pulse-glow 1.8s ease-out infinite;
-  text-shadow:0 1px 3px rgba(0,0,0,.3);
-  box-shadow:0 4px 18px rgba(0,0,0,.5);
-}
-
 /* ── FOOTER ── */
 .site-footer{background:#f0f0f0;padding:32px clamp(16px,5vw,50px) 24px;}
 .footer-inner{max-width:660px;margin:0 auto;}
@@ -370,7 +154,7 @@ vturb-smartplayer{display:block;width:100%;}
 <section class="video-section">
   <div class="video-inner">
     <div class="video-wrap">
-      <vturb-smartplayer id="vid-69e280e0081db0f7b1d11bfc" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+      <vturb-smartplayer id="vid-6a21e076c1da22036cd0b329" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
     </div>
     <p class="watching-row"><span id="watching-now">500</span> people watching now...</p>
     <img
@@ -406,9 +190,9 @@ vturb-smartplayer{display:block;width:100%;}
 <!-- SCRIPTS -->
 <script>
 (function(){
-  var s=document.createElement('script');
-  s.src='https://scripts.converteai.net/76651558-a062-4adb-ba5c-6fbddd96102b/players/69e280e0081db0f7b1d11bfc/v4/player.js';
-  s.async=true;
+  var s=document.createElement("script");
+  s.src="https://scripts.converteai.net/af855cf3-d5ce-4fb4-8794-dd02480f8289/players/6a21e076c1da22036cd0b329/v4/player.js",
+  s.async=!0,
   document.head.appendChild(s);
 })();
 
@@ -418,28 +202,7 @@ function tickW(){
   count+=inc;watchEl.textContent=count;
   setTimeout(tickW,Math.random()*5000+4000);
 }
-tickW();
-
-var cdMin=document.getElementById('cd-min'),cdSec=document.getElementById('cd-sec'),sfCd=document.getElementById('sf-cd'),total=30*60;
-function tickC(){
-  var m=Math.floor(total/60),s=total%60;
-  var mm=String(m).padStart(2,'0'),ss=String(s).padStart(2,'0');
-  cdMin.textContent=mm;cdSec.textContent=ss;sfCd.textContent=mm+':'+ss;
-  if(total>0){total--;setTimeout(tickC,1000);}
-}
-tickC();
-
-var DELAY=1040;
-var ctaBlock=document.getElementById('cta-block');
-var stickyBar=document.getElementById('sticky-bar');
-
-function showCTA(){
-  ctaBlock.classList.remove('esconder');
-  ctaBlock.removeAttribute('style');
-  stickyBar.classList.add('active');
-}
-
-setTimeout(showCTA, DELAY*1000);
+if(watchEl) tickW();
 </script>
 <script defer src="https://cod.codevisita.com.br/code/3569-e7a694c2-9515-4014-95c6-5c16b173eb29"></script>
 </body>
